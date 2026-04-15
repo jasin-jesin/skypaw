@@ -88,43 +88,32 @@ Raspberry Pi Pico H  ──(I2C)──►  PCA9685 Servo Controller
 ```
 SkyPaw/
 │
-├── Jasin/
-│   ├── Sprint1_Design_and_Mechanics/
-│   ├── Sprint2_Electronics/
-│   ├── Sprint3_Programming/
-│   ├── Sprint4_Documentation/
-│   └── Sprint5_Build_and_Testing/
+├── design/                        ← 3D CAD files, mechanical drawings
+│   ├── cad_files/
+│   └── assembly_drawings/
 │
-├── Shekinah/
-│   └── (same sprint structure)
+├── circuit/                       ← Electronics and wiring
+│   ├── schematic/
+│   └── wiring_diagrams/
 │
-├── Ramon/
-│   └── (same sprint structure)
-│
-├── Savio/
-│   └── (same sprint structure)
-│
-├── Apikeshini/
-│   └── (same sprint structure)
-│
-├── docs/
-│   ├── system_architecture.png   ← Hardware architecture diagram
-│   ├── circuit_diagram.png       ← Full circuit schematic
-│   ├── program_flowchart.png     ← Behaviour logic flowchart
-│   ├── gantt_chart.png           ← Project Gantt chart
-│   └── burndown_charts.png       ← Sprint burndown charts
-│
-├── meeting_minutes/
-│   └── meeting_minutes.docx      ← All 14 sessions Jan–Apr 2026
-│
-├── sprint_management/
+├── documentation/                 ← All project documents
+│   ├── system_architecture.png    ← Hardware architecture diagram
+│   ├── program_flowchart.png      ← Behaviour logic flowchart
+│   ├── gantt_chart.png            ← Project Gantt chart
+│   ├── burndown_charts.png        ← Sprint burndown charts
+│   ├── bom.xlsx                   ← Bill of materials (~£93)
 │   ├── risk_register.xlsx
-│   ├── bom.xlsx                  ← Bill of materials (~£93)
-│   └── sprint_plans/
+│   ├── sprint_plans/
+│   └── meeting_minutes.docx       ← All 14 sessions Jan–Apr 2026
 │
-├── media/
-│   ├── photos/
-│   └── videos/
+├── code/                          ← All CircuitPython source code
+│   ├── code.py                    ← Main entry point
+│   ├── behaviours/
+│   │   ├── obstacle_avoidance.py
+│   │   ├── phototaxis.py
+│   │   ├── predator_response.py
+│   │   └── random_walk.py
+│   └── lib/                       ← CircuitPython libraries
 │
 └── README.md
 ```
@@ -186,12 +175,13 @@ BEHAVIOUR = "obstacle_avoidance"  # or "phototaxis", "predator", "random_walk"
 | PCA9685 servo controller | 1 | £3.50 | £3.50 |
 | SG90 servo | 10 | £2.00 | £20.00 |
 | HC-SR04 ultrasonic | 2 | £1.50 | £3.00 |
+| LDR + resistor | 1 | £0.50 | £0.50 |
 | AA battery holder (×4) | 1 | £1.50 | £1.50 |
 | PLA filament | — | ~£15.00 | £15.00 |
 | Jumper wires, PCB, misc | — | ~£10.00 | £10.00 |
 | **Total** | | | **~£58.50** |
 
-> Full BOM with part numbers available in [`sprint_management/bom.xlsx`](sprint_management/bom.xlsx)
+> Full BOM with part numbers available in [`documentation/bom.xlsx`](documentation/bom.xlsx)
 
 ---
 
@@ -217,7 +207,7 @@ This project followed **Scrum** methodology with weekly sprints, managed using:
 - Burndown charts per sprint
 - GitHub for version control and documentation
 
-All sprint management documents are in the [`sprint_management/`](sprint_management/) folder.
+All sprint management documents are in the [`documentation/`](documentation/) folder.
 
 ---
 
