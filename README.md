@@ -17,7 +17,7 @@
 The wings serve as a predator-response display — they open automatically when fast movement is detected by the PIR sensor.
 
 <p align="center">
-  <img src="docs/system_architecture.png" alt="SkyPaw System Architecture" width="800"/>
+  <img src="documents/SkyPaw_System_Architecture.png" alt="SkyPaw System Architecture" width="800"/>
 </p>
 
 ---
@@ -64,7 +64,7 @@ The wings serve as a predator-response display — they open automatically when 
 
 ## System Architecture
 
-The full hardware architecture diagram is located at [`docs/system_architecture.png`](docs/system_architecture.png).
+The full hardware architecture diagram is located at [`documents/SkyPaw_System_Architecture.png`](docs/system_architecture.png).
 
 ```
 4 × AA (6V)
